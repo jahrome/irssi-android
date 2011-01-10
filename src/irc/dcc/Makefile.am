@@ -14,6 +14,7 @@ libirc_dcc_a_SOURCES = \
 	dcc-resume.c \
 	dcc-autoget.c \
 	dcc-queue.c \
+	glob.c \
 	dcc-server.c
 
 pkginc_irc_dccdir=$(pkgincludedir)/src/irc/dcc
@@ -27,4 +28,5 @@ pkginc_irc_dcc_HEADERS = \
 	dcc-send.h \
 	dcc-queue.h \
 	module.h \
+	glob.h \
 	dcc-server.h
