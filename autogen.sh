@@ -58,7 +58,7 @@ autoreconf -i || exit 1
 
 conf_flags="--enable-maintainer-mode"
 
-if test x$NOCONFIGURE = x; then
+if false; then
   echo Running $srcdir/configure $conf_flags "$@" ...
   $srcdir/configure $conf_flags "$@" \
   && echo Now type \`make\' to compile $PKG_NAME || exit 1

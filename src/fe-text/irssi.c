@@ -52,6 +52,12 @@ void fe_perl_init(void);
 void fe_perl_deinit(void);
 #endif
 
+void xmpp_core_init();
+void fe_xmpp_init();
+void text_xmpp_init();
+void xmpp_core_deinit();
+void fe_xmpp_deinit();
+void text_xmpp_deinit();
 void irc_init(void);
 void irc_deinit(void);
 
@@ -188,6 +194,9 @@ static void textui_finish_init(void)
 	perl_core_init();
 	fe_perl_init();
 #endif
+	xmpp_core_init();
+	text_xmpp_init();
+	fe_xmpp_init();
 
 	dirty_check();
 
@@ -212,6 +221,9 @@ static void textui_deinit(void)
         perl_core_deinit();
         fe_perl_deinit();
 #endif
+	xmpp_core_deinit();
+	text_xmpp_deinit();
+	fe_xmpp_deinit();
 
         dirty_check(); /* one last time to print any quit messages */
 	signal_remove("gui exit", (SIGNAL_FUNC) sig_exit);

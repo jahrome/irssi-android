@@ -54,6 +54,9 @@ void noui_init(void)
 	irssi_gui = IRSSI_GUI_NONE;
 	core_init();
 	irc_init();
+	xmpp_core_init();
+	fe_xmpp_init();
+	text_xmpp_init();
 
 	module_register("core", "fe-none");
 
